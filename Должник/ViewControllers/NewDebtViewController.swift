@@ -8,7 +8,7 @@
 import UIKit
 
 
-final class SecondViewController: UIViewController {
+final class NewDebtViewController: UIViewController {
 
     @IBOutlet var name: UITextField!
     @IBOutlet var amount: UITextField!

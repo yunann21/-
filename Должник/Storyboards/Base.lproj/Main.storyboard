@@ -1,26 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o0i-x6-lyu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="96U-6i-73O">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Список должников-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Долги-->
+        <scene sceneID="ehO-16-k2l">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Должник" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="tTg-b0-pyl" customClass="DebtsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="6Rt-3D-8pK">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGray2Color"/>
-                    </view>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Debt" id="bPn-VF-mpg">
+                                <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bPn-VF-mpg" id="dcq-ci-Ysm">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tTg-b0-pyl" id="Zcp-Vx-pA0"/>
+                            <outlet property="delegate" destination="tTg-b0-pyl" id="hkN-QL-rRb"/>
+                        </connections>
+                    </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Список должников" id="kY9-SQ-pBZ">
+                    <navigationItem key="navigationItem" title="Долги" id="gQf-9d-gdD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wX7-1Q-GlD">
                             <connections>
                                 <segue destination="UrY-iW-x6q" kind="show" id="Lld-BE-bbw"/>
@@ -28,15 +41,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zd9-Rj-v36" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944.27480916030527" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1033" y="4"/>
         </scene>
-        <!--Second View Controller-->
+        <!--New Debt View Controller-->
         <scene sceneID="wuT-K2-0YE">
             <objects>
-                <viewController id="UrY-iW-x6q" customClass="SecondViewController" customModule="Должник" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UrY-iW-x6q" customClass="NewDebtViewController" customModule="Должник" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QW5-t9-Unn">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,12 +190,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VDY-xv-HCX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1664.6511627906978" y="3.8626609442060089"/>
+            <point key="canvasLocation" x="1854" y="4"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="qLK-gb-jqR">
+            <objects>
+                <tabBarController id="96U-6i-73O" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8Sa-Ym-9sw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="o0i-x6-lyu" kind="relationship" relationship="viewControllers" id="aOK-ga-dPL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yqa-qw-uer" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-726" y="698"/>
+        </scene>
+        <!--Долги-->
         <scene sceneID="2lg-Gq-Lan">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o0i-x6-lyu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Долги" id="Lic-M7-0cO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="l47-jT-l0r">
                         <rect key="frame" x="0.0" y="59" width="430" height="96"/>
@@ -190,12 +221,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lNP-Lv-N5w"/>
+                        <segue destination="tTg-b0-pyl" kind="relationship" relationship="rootViewController" id="0xl-Ms-jMs"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aXa-Pd-D7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="228" y="4"/>
+            <point key="canvasLocation" x="183" y="4"/>
         </scene>
     </scenes>
     <resources>
@@ -204,9 +235,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
