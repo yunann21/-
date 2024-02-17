@@ -34,7 +34,9 @@ final class NewDebtViewController: UIViewController {
             showAlert(withTitle: "Ошибка", andMessage: "Не указано имя и/или сумма")
         }
         if finalDate.date < startDate.date {
-            showAlert(withTitle: "Ошибка", andMessage: "Дата возврата не может быть раньше стартовой даты")
+            showAlert(withTitle: "Внимание!", andMessage: "Дата возврата не может быть раньше стартовой даты.\nСтартовая дата была изменена.") {
+                self.startDate.date = self.finalDate.date
+            }
         }
     
         let namePattern = "^[a-zA-Zа-яА-я ]{2,50}$"
@@ -42,6 +44,7 @@ final class NewDebtViewController: UIViewController {
         if !isNameValid {
             showAlert(withTitle: "Ошибка", andMessage: "Имя указано некорректно")
         }
+        
         
     }
     
