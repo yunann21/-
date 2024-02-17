@@ -12,6 +12,7 @@ final class NewDebtViewController: UIViewController {
     
     @IBOutlet var name: UITextField!
     @IBOutlet var amount: UITextField!
+    @IBOutlet var comment: UITextField!
     
     @IBOutlet var startDate: UIDatePicker!
     @IBOutlet var finalDate: UIDatePicker!
@@ -61,7 +62,7 @@ final class NewDebtViewController: UIViewController {
             direction: sender.tag == 1,
             startDate: startDate.date,
             finishDate: finalDate.date,
-            comment: ""
+            comment: comment.text ?? ""
         )
         
         dismiss(animated: true)
