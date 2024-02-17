@@ -27,10 +27,38 @@ final class StorageManager {
     
     func save() {
         write {
-            let debt = Debts(personName: "qwe", debtSize: 123, direction: true, startDate: Date(), finishDate: Date())
-            realm.add(debt)
+           
         }
     }
+    
+    func save(
+        personName: String,
+        debtSize: Int,
+        direction: Bool,
+        startDate: Date,
+        finishDate: Date,
+        comment: String = "",
+        completion: (Debts) -> Void
+    ) {
+        write {
+            let newDebt = Debts(
+                personName: personName,
+                debtSize: debtSize,
+                direction: direction,
+                startDate: startDate,
+                finishDate: finishDate
+            )
+            realm.add(newDebt)
+            completion(newDebt)
+        }
+    }
+    
+    func delete(_ debt: Debts) {
+        write {
+            realm.delete(debt)
+        }
+    }
+    
     
     private func write(completion: () -> Void) {
         do {

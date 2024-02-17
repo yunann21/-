@@ -9,16 +9,24 @@ import UIKit
 
 
 final class NewDebtViewController: UIViewController {
-
+    
     @IBOutlet var name: UITextField!
     @IBOutlet var amount: UITextField!
     
     @IBOutlet var startDate: UIDatePicker!
     @IBOutlet var finalDate: UIDatePicker!
     
+    weak var delegate: NewDebtViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        view.endEditing(true)
     }
     
     @IBAction func deleteInformation() {
@@ -38,16 +46,25 @@ final class NewDebtViewController: UIViewController {
                 self.startDate.date = self.finalDate.date
             }
         }
-    
+        
         let namePattern = "^[a-zA-Zа-яА-я ]{2,50}$"
         let isNameValid = NSPredicate(format: "SELF MATCHES %@", namePattern).evaluate(with: name.text)
         if !isNameValid {
             showAlert(withTitle: "Ошибка", andMessage: "Имя указано некорректно")
         }
         
+        let debtSize = Int(amount.text ?? "0") ?? 0
+        
+        delegate?.addDebt(
+            personName: name.text ?? "",
+            debtSize: debtSize,
+            direction: sender.tag == 1,
+            startDate: startDate.date,
+            finishDate: finalDate.date,
+            comment: ""
+        )
+        
+        dismiss(animated: true)
         
     }
-    
-
-
 }
