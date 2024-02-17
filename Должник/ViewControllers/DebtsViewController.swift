@@ -32,7 +32,7 @@ final class DebtsViewController: UITableViewController {
     
     private func reloadBadge() {
         if let tabBarItem = navigationController?.tabBarItem {
-            tabBarItem.badgeValue = debts.count.description
+            tabBarItem.badgeValue = currentDebts.count.description
         }
     }
 }
@@ -40,11 +40,7 @@ final class DebtsViewController: UITableViewController {
 // MARK: - UITableViewDataSource
 extension DebtsViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        var sections = 0
-        if !currentDebts.isEmpty {sections += 1}
-        if !payedDebts.isEmpty {sections += 1}
-        
-        return 2// sections
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
