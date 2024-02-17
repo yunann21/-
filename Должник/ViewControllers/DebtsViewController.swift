@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import RealmSwift
 
-final class MainViewController: UITableViewController {
+final class DebtsViewController: UITableViewController {
+    private let storageManager = StorageManager.shared
+    private var debts: Results<Debts>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        debts = storageManager.fetchData(Debts.self)
+        storageManager.save()
+        
     }
 
 

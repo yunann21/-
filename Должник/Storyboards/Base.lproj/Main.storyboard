@@ -12,7 +12,7 @@
         <!--Долги-->
         <scene sceneID="ehO-16-k2l">
             <objects>
-                <tableViewController id="tTg-b0-pyl" customClass="DebtsViewController" sceneMemberID="viewController">
+                <tableViewController id="tTg-b0-pyl" customClass="DebtsViewController" customModule="Должник" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="6Rt-3D-8pK">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
