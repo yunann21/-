@@ -27,11 +27,18 @@ final class DebtsViewController: UITableViewController {
         super.viewDidLoad()
         debts = storageManager.fetchData(Debts.self)
         storageManager.save()
+        reloadBadge(debts.count.description)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let newDebtVC = segue.destination as? NewDebtViewController
         newDebtVC?.delegate = self
+    }
+    
+    private func reloadBadge(_ value: String) {
+        if let tabBarItem = navigationController?.tabBarItem {
+            tabBarItem.badgeValue = value
+        }
     }
 }
 
@@ -85,6 +92,7 @@ extension DebtsViewController: NewDebtViewControllerDelegate {
                             finishDate: finishDate) { debt in
             let rowIndex = IndexPath(row: debts.index(of: debt) ?? 0, section: 0)
             tableView.insertRows(at: [rowIndex], with: .automatic)
+            reloadBadge(debts.count.description)
         }
     }
 }
