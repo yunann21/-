@@ -27,7 +27,7 @@ final class StorageManager {
     
     func save() {
         write {
-            let debt = Debts(personName: "qwe", debtSize: 123, startDate: Date(), finishDate: Date())
+            let debt = Debts(personName: "qwe", debtSize: 123, direction: true, startDate: Date(), finishDate: Date())
             realm.add(debt)
         }
     }
