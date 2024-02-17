@@ -15,8 +15,9 @@ final class Debts: Object {
     @Persisted var startDate: Date
     @Persisted var finishDate: Date
     @Persisted var comment: String
+    @Persisted var isPayed: Bool = false
     
-    convenience init(personName: String, debtSize: Int, direction: Bool, startDate: Date, finishDate: Date, comment: String = "") {
+    convenience init(personName: String, debtSize: Int, direction: Bool, startDate: Date, finishDate: Date, comment: String = "", isPayed: Bool = false) {
         self.init()
         self.personName = personName
         self.debtSize = debtSize
@@ -24,6 +25,7 @@ final class Debts: Object {
         self.startDate = startDate
         self.finishDate = finishDate
         self.comment = comment
+        self.isPayed = isPayed
     }
 }
 
