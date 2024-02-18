@@ -46,10 +46,12 @@ final class NewDebtViewController: UIViewController {
     @IBAction func saveInformation(_ sender: UIButton) {
         if name.text!.isEmpty || amount.text!.isEmpty {
             showAlert(withTitle: "Ошибка", andMessage: "Не указано имя и/или сумма")
+            return
         }
         if finalDate.date < startDate.date {
             showAlert(withTitle: "Внимание!", andMessage: "Дата возврата не может быть раньше стартовой даты.\nСтартовая дата была изменена.") {
                 self.startDate.date = self.finalDate.date
+                return
             }
         }
         
@@ -57,6 +59,7 @@ final class NewDebtViewController: UIViewController {
         let isNameValid = NSPredicate(format: "SELF MATCHES %@", namePattern).evaluate(with: name.text)
         if !isNameValid {
             showAlert(withTitle: "Ошибка", andMessage: "Имя указано некорректно")
+            return
         }
         
         let debtSize = Int(amount.text ?? "0") ?? 0
