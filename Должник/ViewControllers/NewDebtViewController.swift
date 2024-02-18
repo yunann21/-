@@ -33,8 +33,13 @@ final class NewDebtViewController: UIViewController {
     @IBAction func deleteInformation() {
         name.text = ""
         amount.text = ""
+        comment.text = ""
         startDate.date = .now
         finalDate.date = .now
+    }
+    
+    @IBAction func goOut() {
+        dismiss(animated: true)
     }
     
     

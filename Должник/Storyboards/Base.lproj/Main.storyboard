@@ -116,25 +116,27 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1xf-9z-xlV">
                                                 <rect key="frame" x="0.0" y="0.0" width="224" height="43.666666666666664"/>
-                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Pg2-m1-JYE">
                                                 <rect key="frame" x="0.0" y="51.666666666666657" width="224" height="43.666666666666657"/>
+                                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                                             </datePicker>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="peb-pb-sNt">
                                                 <rect key="frame" x="0.0" y="103.33333333333334" width="224" height="43.333333333333343"/>
+                                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                                             </datePicker>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="r6J-2G-q0h">
                                                 <rect key="frame" x="0.0" y="154.66666666666666" width="224" height="43.666666666666657"/>
-                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="fHF-0D-bdS">
                                                 <rect key="frame" x="0.0" y="206.33333333333331" width="224" height="43.666666666666657"/>
-                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -150,20 +152,11 @@
                                     <constraint firstAttribute="height" constant="250" id="nub-P0-7Zu"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDs-7B-sPa">
-                                <rect key="frame" x="20" y="16.000000000000004" width="374" height="34.333333333333343"/>
-                                <color key="tintColor" systemColor="linkColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Стереть"/>
-                                <connections>
-                                    <action selector="deleteInformation" destination="UrY-iW-x6q" eventType="touchUpInside" id="1e2-OI-6M0"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="B3Z-kv-vbf">
-                                <rect key="frame" x="20" y="665.66666666666663" width="374" height="34.333333333333371"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="B3Z-kv-vbf">
+                                <rect key="frame" x="20" y="400" width="374" height="34.333333333333314"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8g7-Vi-Ubi">
-                                        <rect key="frame" x="0.0" y="0.0" width="172" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="34.333333333333336"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -178,7 +171,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYr-de-yoR">
-                                        <rect key="frame" x="202" y="0.0" width="172" height="34.333333333333336"/>
+                                        <rect key="frame" x="207" y="0.0" width="167" height="34.333333333333336"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -194,19 +187,43 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="DTU-il-R3t">
+                                <rect key="frame" x="16" y="20.000000000000004" width="382" height="34.333333333333343"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFC-hS-LHf">
+                                        <rect key="frame" x="0.0" y="0.0" width="116" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="linkColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Назад"/>
+                                        <connections>
+                                            <action selector="deleteInformation" destination="UrY-iW-x6q" eventType="touchUpInside" id="C46-B9-GE8"/>
+                                            <action selector="goOut" destination="UrY-iW-x6q" eventType="touchUpInside" id="uDC-AE-tcC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDs-7B-sPa">
+                                        <rect key="frame" x="266" y="0.0" width="116" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="linkColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Стереть"/>
+                                        <connections>
+                                            <action selector="deleteInformation" destination="UrY-iW-x6q" eventType="touchUpInside" id="1e2-OI-6M0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k8R-u0-bJi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="k8R-u0-bJi" firstAttribute="trailing" secondItem="jDs-7B-sPa" secondAttribute="trailing" constant="20" id="Eso-Yp-tlT"/>
+                            <constraint firstItem="DTU-il-R3t" firstAttribute="leading" secondItem="k8R-u0-bJi" secondAttribute="leading" constant="16" id="09k-9q-hnY"/>
+                            <constraint firstItem="B3Z-kv-vbf" firstAttribute="top" secondItem="4kF-GY-UPJ" secondAttribute="bottom" constant="50" id="1pR-ga-SO0"/>
                             <constraint firstItem="4kF-GY-UPJ" firstAttribute="leading" secondItem="k8R-u0-bJi" secondAttribute="leading" constant="16" id="LhS-DG-sYJ"/>
-                            <constraint firstItem="jDs-7B-sPa" firstAttribute="top" secondItem="k8R-u0-bJi" secondAttribute="top" constant="16" id="MFe-yH-yz9"/>
                             <constraint firstItem="k8R-u0-bJi" firstAttribute="trailing" secondItem="4kF-GY-UPJ" secondAttribute="trailing" constant="16" id="NHT-wC-U6i"/>
                             <constraint firstItem="k8R-u0-bJi" firstAttribute="trailing" secondItem="B3Z-kv-vbf" secondAttribute="trailing" constant="20" id="T7R-XU-Try"/>
                             <constraint firstItem="B3Z-kv-vbf" firstAttribute="leading" secondItem="k8R-u0-bJi" secondAttribute="leading" constant="20" id="a7v-kG-WMr"/>
-                            <constraint firstItem="k8R-u0-bJi" firstAttribute="bottom" secondItem="B3Z-kv-vbf" secondAttribute="bottom" constant="16" id="foj-b8-42b"/>
-                            <constraint firstItem="jDs-7B-sPa" firstAttribute="leading" secondItem="k8R-u0-bJi" secondAttribute="leading" constant="20" id="gWg-Qa-Phf"/>
+                            <constraint firstItem="DTU-il-R3t" firstAttribute="top" secondItem="k8R-u0-bJi" secondAttribute="top" constant="20" id="dcQ-iB-ZEP"/>
                             <constraint firstItem="4kF-GY-UPJ" firstAttribute="top" secondItem="k8R-u0-bJi" secondAttribute="top" constant="100" id="ly2-qs-Wm2"/>
+                            <constraint firstItem="k8R-u0-bJi" firstAttribute="trailing" secondItem="DTU-il-R3t" secondAttribute="trailing" constant="16" id="qnD-tu-Ug8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ed2-4K-vqO"/>
@@ -262,6 +279,9 @@
     <resources>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
