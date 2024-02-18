@@ -103,6 +103,7 @@ extension DebtsViewController {
             
             storageManager.toggleIsPayed(debt)
             tableView.moveRow(at: fromIndex, to: toIndex)
+            reloadBadge()
             isDone(true)
         }
         
@@ -112,7 +113,10 @@ extension DebtsViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let comment = debts[indexPath.row].comment
+        let comment = indexPath.section == 0 
+            ? currentDebts[indexPath.row].comment
+            : payedDebts[indexPath.row].comment
+        
         if !comment.isEmpty {
             let alert = AlertControllerBuilder(title: "Комментарий", message: comment)
             alert.addAction(title: "OK", style: .default)
