@@ -71,7 +71,7 @@
                                             </subviews>
                                         </stackView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text.bubble.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sqp-kS-kz4">
-                                            <rect key="frame" x="371.66666666666669" y="12.333333333333334" width="22.333333333333314" height="19.333333333333329"/>
+                                            <rect key="frame" x="371.66666666666669" y="12.333333333333334" width="22.333333333333314" height="19.333333333333314"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -114,6 +114,164 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zd9-Rj-v36" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1031.8840579710145" y="3.2608695652173916"/>
+        </scene>
+        <!--Люди-->
+        <scene sceneID="SVc-jc-wLv">
+            <objects>
+                <tableViewController id="h5g-a6-C1G" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="8Zr-CP-Gbz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="person" rowHeight="106" id="qs1-Cc-i7K">
+                                <rect key="frame" x="0.0" y="50" width="414" height="106"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qs1-Cc-i7K" id="hFP-Jd-QSL">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="h5g-a6-C1G" id="rCE-FM-0YK"/>
+                            <outlet property="delegate" destination="h5g-a6-C1G" id="4PZ-AF-cRJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Люди" id="Oye-nA-zZh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="daC-ne-6iL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069.5652173913045" y="1030.4347826086957"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="Mct-fz-05q">
+            <objects>
+                <tableViewController id="fLd-OI-dWc" customClass="SettingsViewController" customModule="Должник" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="fzp-tC-n4d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="TD1-zt-3Fn">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="uRk-n5-qHF">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uRk-n5-qHF" id="PNS-XV-ZI7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="О приложении" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXU-ko-YyW">
+                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="linkColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wXU-ko-YyW" firstAttribute="top" secondItem="PNS-XV-ZI7" secondAttribute="topMargin" id="5Gh-Vj-Zs4"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="wXU-ko-YyW" secondAttribute="trailing" id="KhA-yV-DRt"/>
+                                                <constraint firstItem="wXU-ko-YyW" firstAttribute="leading" secondItem="PNS-XV-ZI7" secondAttribute="leadingMargin" id="giq-R7-YX0"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wXU-ko-YyW" secondAttribute="bottom" id="kD2-1l-InS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="bOa-NZ-DOV" kind="presentation" modalTransitionStyle="flipHorizontal" id="3ev-z4-vW5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="fLd-OI-dWc" id="phQ-tL-tB7"/>
+                            <outlet property="delegate" destination="fLd-OI-dWc" id="AzB-sG-tRC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Настройки" id="kz7-4p-XZC"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b6v-XF-p7X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="183" y="1762"/>
+        </scene>
+        <!--About App View Controller-->
+        <scene sceneID="6ef-QA-Yvb">
+            <objects>
+                <viewController id="bOa-NZ-DOV" customClass="AboutAppViewController" customModule="Должник" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zGF-wE-x9i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Iu-nw-iik">
+                                <rect key="frame" x="16" y="60.000000000000007" width="382" height="20.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DT1-IW-CHD">
+                                <rect key="frame" x="16" y="20" width="74" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="GIi-6A-sZs"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Назад"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped" destination="bOa-NZ-DOV" eventType="touchUpInside" id="h2C-lR-fxO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VTr-9l-UWC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DT1-IW-CHD" firstAttribute="leading" secondItem="VTr-9l-UWC" secondAttribute="leading" constant="16" id="3L1-WJ-eMR"/>
+                            <constraint firstItem="7Iu-nw-iik" firstAttribute="top" secondItem="DT1-IW-CHD" secondAttribute="bottom" constant="20" id="5JZ-BX-zcV"/>
+                            <constraint firstItem="DT1-IW-CHD" firstAttribute="top" secondItem="VTr-9l-UWC" secondAttribute="top" constant="20" id="EhP-9S-1pA"/>
+                            <constraint firstItem="VTr-9l-UWC" firstAttribute="trailing" secondItem="7Iu-nw-iik" secondAttribute="trailing" constant="16" id="IOD-aQ-c53"/>
+                            <constraint firstItem="7Iu-nw-iik" firstAttribute="leading" secondItem="VTr-9l-UWC" secondAttribute="leading" constant="16" id="jVd-Kk-evZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="h2s-vB-W5G"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="7Iu-nw-iik" id="HLO-JB-bEn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xcs-xO-MTC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1070" y="1762"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="q1n-ZL-nBS">
+            <objects>
+                <navigationController id="OmI-Sh-h0k" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Настройки" image="gearshape.fill" catalog="system" id="lak-Zo-FJz"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ty2-5z-Avi">
+                        <rect key="frame" x="0.0" y="20" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fLd-OI-dWc" kind="relationship" relationship="rootViewController" id="Xcw-Yv-eZ4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XQi-7C-G4M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-726" y="1762"/>
+        </scene>
+        <!--Люди-->
+        <scene sceneID="9VP-Z5-Gbl">
+            <objects>
+                <navigationController id="vhV-x5-7TM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Люди" image="person.2.fill" catalog="system" id="cOY-Yj-6Eu"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="rNm-4a-Ujb">
+                        <rect key="frame" x="0.0" y="20" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="h5g-a6-C1G" kind="relationship" relationship="rootViewController" id="Jm9-nV-gPN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nY8-1I-Dnq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="183" y="1031"/>
         </scene>
         <!--New Debt View Controller-->
         <scene sceneID="wuT-K2-0YE">
@@ -303,6 +461,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="o0i-x6-lyu" kind="relationship" relationship="viewControllers" id="aOK-ga-dPL"/>
+                        <segue destination="vhV-x5-7TM" kind="relationship" relationship="viewControllers" id="7fc-Ra-SDH"/>
+                        <segue destination="OmI-Sh-h0k" kind="relationship" relationship="viewControllers" id="FPn-Nm-NUb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yqa-qw-uer" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -313,7 +473,7 @@
         <scene sceneID="2lg-Gq-Lan">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o0i-x6-lyu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Долги" id="Lic-M7-0cO"/>
+                    <tabBarItem key="tabBarItem" title="Долги" image="dollarsign" catalog="system" id="Lic-M7-0cO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="l47-jT-l0r">
                         <rect key="frame" x="0.0" y="20" width="414" height="96"/>
@@ -331,6 +491,9 @@
     </scenes>
     <resources>
         <image name="arrowshape.up.fill" catalog="system" width="123" height="128"/>
+        <image name="dollarsign" catalog="system" width="89" height="128"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <image name="person.2.fill" catalog="system" width="128" height="86"/>
         <image name="text.bubble.fill" catalog="system" width="128" height="110"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

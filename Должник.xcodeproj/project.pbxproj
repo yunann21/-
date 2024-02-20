@@ -22,6 +22,8 @@
 		F72C6FF32B81478800271E94 /* AlertControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C6FF22B81478800271E94 /* AlertControllerBuilder.swift */; };
 		F72C6FF62B814CD900271E94 /* Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C6FF52B814CD900271E94 /* Delegates.swift */; };
 		F72C6FF92B81504100271E94 /* DebtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C6FF82B81504100271E94 /* DebtCell.swift */; };
+		F72C6FFB2B826F7A00271E94 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C6FFA2B826F7A00271E94 /* AboutAppViewController.swift */; };
+		F774DAF62B8272BF00A4DAD3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F774DAF52B8272BF00A4DAD3 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		F72C6FF22B81478800271E94 /* AlertControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerBuilder.swift; sourceTree = "<group>"; };
 		F72C6FF52B814CD900271E94 /* Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegates.swift; sourceTree = "<group>"; };
 		F72C6FF82B81504100271E94 /* DebtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtCell.swift; sourceTree = "<group>"; };
+		F72C6FFA2B826F7A00271E94 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
+		F774DAF52B8272BF00A4DAD3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 			children = (
 				16DEBD212B7C93CC00EEEC65 /* DebtsViewController.swift */,
 				16DEBD312B7CBEB500EEEC65 /* NewDebtViewController.swift */,
+				F72C6FFA2B826F7A00271E94 /* AboutAppViewController.swift */,
+				F774DAF52B8272BF00A4DAD3 /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -252,6 +258,7 @@
 			files = (
 				F72C6FF32B81478800271E94 /* AlertControllerBuilder.swift in Sources */,
 				16DEBD322B7CBEB500EEEC65 /* NewDebtViewController.swift in Sources */,
+				F72C6FFB2B826F7A00271E94 /* AboutAppViewController.swift in Sources */,
 				F72C6FF92B81504100271E94 /* DebtCell.swift in Sources */,
 				16DEBD222B7C93CC00EEEC65 /* DebtsViewController.swift in Sources */,
 				16DEBD1E2B7C93CC00EEEC65 /* AppDelegate.swift in Sources */,
@@ -260,6 +267,7 @@
 				F72C6FEE2B80D01300271E94 /* Debts.swift in Sources */,
 				F72C6FF62B814CD900271E94 /* Delegates.swift in Sources */,
 				16DEBD342B7F42C000EEEC65 /* UIViewController + Alert.swift in Sources */,
+				F774DAF62B8272BF00A4DAD3 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
