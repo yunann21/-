@@ -14,5 +14,5 @@ final class DebtCell: UITableViewCell {
     @IBOutlet weak var debtSizeLabel: UILabel!
     @IBOutlet weak var debtDirectionImage: UIImageView!
     @IBOutlet weak var hasCommentImage: UIImageView!
-
+    
 }

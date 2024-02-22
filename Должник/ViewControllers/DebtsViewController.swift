@@ -55,7 +55,7 @@ extension DebtsViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Debt", for: indexPath)
         
         guard let debtCell = cell as? DebtCell else { return UITableViewCell() }
-        
+     
         let debt = indexPath.section == 0 ? currentDebts[indexPath.row] : payedDebts[indexPath.row]
         
         debtCell.personNameLabel.text = debt.personName
